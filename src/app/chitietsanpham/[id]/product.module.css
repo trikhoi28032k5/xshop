@@ -1,0 +1,241 @@
+.mainContainer {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+.productTop {
+  display: flex;
+  gap: 40px;
+}
+
+.imageGallery {
+  flex: 1;
+}
+
+.mainImage {
+  border: 1px solid #eee;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.mainImage img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: crimson;
+  color: white;
+  padding: 5px 12px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+/* Container chứa các ảnh nhỏ */
+.thumbnailList {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Từng ô ảnh nhỏ */
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail:hover {
+  border-color: #ee2624;
+}
+
+/* Khi ảnh được chọn */
+.activeThumbnail {
+  border-color: #ee2624;
+}
+
+.productInfo {
+  flex: 1;
+}
+
+.priceBox {
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.newPrice {
+  color: #ee2624;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  margin-left: 15px;
+  color: #999;
+}
+
+.purchaseActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.quantitySelector {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.quantitySelector button {
+  width: 40px;
+  background: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+.quantitySelector input {
+  width: 50px;
+  text-align: center;
+  border: none;
+}
+
+.btnAddToCart {
+  border: 1.5px solid #ee2624;
+  color: #000000;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnBuyNow {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  flex: 1;
+}
+
+.hotlineBox {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+}
+/* Container chứa các nút tab */
+.tabsContainer {
+  display: flex;
+  gap: 10px;
+  border-bottom: 2px solid #eee; /* Đường kẻ ngang mờ dưới chân các nút */
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Kiểu dáng chung cho các nút */
+.tabButton {
+  background: none;
+  border: none;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  text-transform: uppercase; /* Chữ in hoa như trong ảnh */
+}
+
+/* Hiệu ứng khi di chuột qua nút (Hover) */
+.tabButton:hover {
+  color: crimson; /* Đổi sang màu đỏ chủ đạo */
+}
+
+/* Trạng thái nút đang được chọn (Active) */
+.activeTab {
+  color: #ee2624;
+}
+
+/* Tạo đường gạch chân đỏ cho nút đang chọn */
+.activeTab::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Đè lên đường kẻ ngang của container */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ee2624;
+}
+/* Khung chứa bên ngoài (đã có trong code cũ nhưng cần đảm bảo padding) */
+.tabContent {
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top: none; /* Để nối liền với thanh tab */
+  min-height: 200px; /* Độ cao tối thiểu để không bị quá ngắn */
+}
+
+/* Khung đệm bên trong để chữ không chạm mép */
+.innerTabContent {
+  padding: 25px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.contentTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.contentList {
+  padding-left: 20px;
+}
+
+/* Định dạng bảng thông số cho gọn trong ô */
+.specTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specTable td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.specTable td:first-child {
+  font-weight: 600;
+  width: 30%;
+  color: #666;
+  background-color: #fafafa; /* Tô màu nhẹ cho cột tiêu đề */
+}
+
+

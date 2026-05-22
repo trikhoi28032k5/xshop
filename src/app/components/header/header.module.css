@@ -1,0 +1,181 @@
+.header {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logoIcon {
+  background: crimson;
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.brandName {
+  font-weight: 800;
+  color: crimson;
+  font-size: 26px;
+  margin-left: 10px;
+  letter-spacing: -1px;
+}
+
+/* Search Bar hiện đại hơn */
+.searchBar {
+  display: flex;
+  background: #f1f3f5;
+  border: 1.5px solid #eee;
+  border-radius: 50px; /* Bo tròn hoàn toàn */
+  padding: 4px 4px 4px 15px;
+  width: 450px;
+  transition: all 0.3s ease;
+}
+
+.searchBar:focus-within {
+  border-color: crimson;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(220, 20, 60, 0.1);
+}
+
+.searchBar input {
+  border: none;
+  background: transparent;
+  padding: 8px 0;
+  flex: 1;
+  outline: none;
+  font-size: 14px;
+}
+
+.searchBtn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.searchBtn:hover {
+  opacity: 0.9;
+}
+
+.btnLogin {
+  background: transparent;
+  border: 1px solid crimson;
+  color: crimson;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnLogin:hover {
+  background: crimson;
+  color: white;
+}
+
+/* Navigation */
+.nav {
+  border-top: 1px solid #f1f1f1;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navListItem {
+  position: relative; /* Quan trọng để menu con căn theo */
+  padding: 15px 12px;
+}
+
+.navLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navListItem:hover .navLink {
+  color: crimson;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.name {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Menu con (Dropdown) */
+.subMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  list-style: none;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.navListItem:hover .subMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.subItem {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.subItem:hover {
+  background: #fff5f5;
+  color: crimson;
+}
